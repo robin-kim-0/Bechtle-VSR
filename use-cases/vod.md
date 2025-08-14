@@ -21,19 +21,23 @@ This use case describes the complete process of upscaling low-resolution videos 
 Upload the orignal low-quality video to the designated AWS S3 input bucket.
 
 ```bash
-aws s3 cp <input-file-name> s3://<s3-bucktet-name>/<input-file-name>
+aws s3 cp original_input.mp4 s3://<s3-input-bucktet-name>/original_input.mp4
 ```
 
 ### 2. Run VSR Processing
 
 From Lambda or Step Functions, send the processing command to the AMI using SSM Run Command.
 
+```bash
+ffmpeg -i original_input.mp4 -vf bdsr_aws=scale=2 -pix_fmt yuv420p -c:v libx264 upscaled_x2.mp4
+```
+
 ### 3. Upload Processed Output
 
 Save the restored/upscaled video to the AWS S3 output bucket.
 
 ```bash
-aws s3 cp <input-file-name> s3://<s3-bucktet-name>/<input-file-name>
+aws s3 cp upscaled_x2.mp4 s3://<s3-output-bucktet-name>/upscaled_x2.mp4
 ```
 
 ### 4. Create MediaConvert Job
