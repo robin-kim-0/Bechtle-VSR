@@ -3,7 +3,7 @@
 [1 CREATING AN INSTANCE WITH BECHTLE-VSR AMI](#1-creating-an-instance-with-bechtle-vsr-ami)<br/>
 [2 TRY OUR SR SOLUTIONS](#2-try-our-sr-solution)<br/>
 [3 REFERENCES](#3-references)<br/>
-[4 Live Use Cases for Bluewhale-VSR AMI with AWS Elemental](#4-live-use-cases-for-bluewhale-vsr-ami-with-aws-elemental)<br/>
+[4 LIVE USE CASES FOR BLUEWHALE-VSR AMI WITH AWS ELEMENTAL](#4-live-use-cases-for-bluewhale-vsr-ami-with-aws-elemental)<br/>
 
 ---
 
